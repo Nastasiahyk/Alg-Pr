@@ -28,3 +28,11 @@ def smallest_power_of_2_above_n(n):
 n = int(input("Введите натуральное число n: "))
 result = smallest_power_of_2_above_n(n)
 print("Наименьшее число вида 2^r, превосходящее", n, "равно", result)
+#Задание1
+import math
+i = 1
+e = math.pow(10,-4)
+while abs(((2*i)**2)/((2*i-1)*(2*i+1))-1)>e:
+    i+1
+    x=((2*i)**2)/((2*i-1)*(2*i+1))
+    print(x)
