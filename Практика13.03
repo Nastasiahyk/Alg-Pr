@@ -1,0 +1,30 @@
+#Задани1.1 
+import sympy as sp
+n = sp.Symbol('n')
+inequality = 3*n**4 - 730*n < 5
+solution = sp.solve(inequality, n)
+print(solution)
+#Задание1.2
+import sympy as sp
+n = sp.Symbol('n')
+inequality = sp.exp(n) - 1000*sp.log(n) <= 10
+solution = sp.solve(inequality, n)
+print(solution)
+#Задание2
+def max_k(m):
+    k = 0
+    while 4**k < m:
+        k += 1
+    return k - 1
+m = int(input("Введите целое число m (>1): "))
+result = max_k(m)
+print("Наибольшее целое k, при котором 4^k < m, равно", result)
+#Задание3
+def smallest_power_of_2_above_n(n):
+    r = 0
+    while 2**r <= n:
+        r += 1
+    return 2**r
+n = int(input("Введите натуральное число n: "))
+result = smallest_power_of_2_above_n(n)
+print("Наименьшее число вида 2^r, превосходящее", n, "равно", result)
